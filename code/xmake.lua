@@ -10,5 +10,6 @@ target(TARGET_NAME)
 -- [don't edit] ---
     set_kind("static")-------------------------设置文件输出类型
 	add_files("src/*.c")-----------------------设置编译的源文件
-	add_includedirs("./inc", {public = true})--设置头文件的搜索目录
+	add_includedirs("inc", {public = true})--设置头文件的搜索目录
+	add_headerfiles("inc/*.h", {prefixdir = "RTOS"})
 target_end()
