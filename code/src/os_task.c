@@ -14,6 +14,13 @@
  * @return          指向任务控制块的指针
  ***********************************************************************************************************************
  */
+ osTaskAttr_t  default_TCB=
+ {
+      . priority = 16;
+ . stack_si
+ uint32_t time_sli
+ const char *name;
+ }
 void *osTaskNew(osTaskFun_t entry, void *argument, const osTaskAttr_t *attr)
 {
     osTaskAttr_t temp_attr = OS_NULL;
@@ -24,6 +31,11 @@ void *osTaskNew(osTaskFun_t entry, void *argument, const osTaskAttr_t *attr)
     }
     
     if(attr == OS_NULL)
+    {
+
+    }
     
 
 }
+
+
